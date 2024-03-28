@@ -53,7 +53,7 @@ void q_short(int low, int high)
 
 	while (i <= j)
 	{
-		while ((arr[j] > pivot) && (j >= low)) {
+		while ((arr[i] <= pivot) && (i <= high)) {
 			i++;
 			cmp_count++;
 		}
@@ -81,11 +81,11 @@ void display() {
 	cout << "---------------------" << endl;
 
 	for (int i = 0; i < n; i++) {
-		cout << arr[1] << " ";
+		cout << arr[i] << " ";
 	}
 
 	cout << "\n\nNumber of comparasions: " << cmp_count << endl;
-	cout << "Number of data movements" << mov_count << endl;
+	cout << "Number of data movements: " << mov_count << endl;
 }
 
 
